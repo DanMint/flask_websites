@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <style>
+      /* Add some basic styling to make the form look nicer */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label, input, textarea {
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      textarea {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <form action="/contact" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="submit" value="Send">
+    </form>
+  </body>
+</html>
+
+{% endblock %}
