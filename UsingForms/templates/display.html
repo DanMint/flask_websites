@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Display Example</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Name:</h4>
+        <p>{{ name }}</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Message:</h4>
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+<style>
+  body {
+    background-color: #f8f9fa;
+  }
+  h1, h4 {
+    color: #1a1a1a;
+  }
+  p {
+    color: #555;
+  }
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+</style>
