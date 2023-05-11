@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>UPDATE</h1>
+    <br/>
+    <form action="/update/{{friend_to_update.id}}" METHOD="POST">
+        <!-- 
+        type="text": Specifies that the input field is a text input. This means that the user can enter any text into the field.
+        placeholder="Name": Specifies a short hint that describes the expected value of the input field. In this case, "Name" is the hint text.
+        name="name": Specifies the name of the input field. This is the name that will be used to identify the input field in the form data that is submitted to the server.
+        value="{{friend_to_update.name}}": Specifies the initial value of the input field. In this case, the value is set to the current name of the friend that is being updated (i.e., friend_to_update.name). This means that the current name will be displayed in the input field when the form is loaded, allowing the user to edit the name if they wish.
+         -->
+        <input type="text" placeholder="Name" name="name" value="{{friend_to_update.name}}">
+        <input type="submit" value="Update Name" class="btn btn-secondary">
+    </form>
+    <br/>
+    <br/>
+</div>
+
+
+{% endblock %}
